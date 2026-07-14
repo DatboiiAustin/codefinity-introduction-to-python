@@ -9,11 +9,11 @@ inventory = {
 discount_threshold = 100
 print("Processing started")
 for item in inventory:
-    current_stock, min_stock, restock_amount, on_sale = inventory[item]
-    while current_stock < min_stock:
+    current_stock, min_stock, restock_amount, on_sale = inventory[item] # define "Items" within "inventory" for the loop
+    while current_stock < min_stock: # while to determine trigger for loop action
         current_stock += restock_amount
     inventory[item][0] = current_stock
-    print(f"Processing {item}")
+    print(f"Processing {item}") # issue command for loop "text" structure
     if current_stock > discount_threshold:
         inventory[item][3] = True
     
